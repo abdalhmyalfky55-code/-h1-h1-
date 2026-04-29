@@ -3,33 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة الشغل والفلوس | دليل المبتدئين</title>
+    <title>منصة الشغل والفلوس | عالم الربح الحر</title>
     <style>
-        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #050f22; color: white; text-align: center; scroll-behavior: smooth; }
-        header { background: linear-gradient(135deg, #0a1931, #162a49); padding: 50px 20px; border-bottom: 3px solid #4facfe; }
-        nav { background: #0a1931; padding: 15px; position: sticky; top: 0; z-index: 100; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        nav a { color: #4facfe; text-decoration: none; font-weight: bold; font-size: 16px; transition: 0.3s; }
-        nav a:hover { color: white; }
-        .container { padding: 40px 20px; max-width: 800px; margin: auto; }
-        .btn-card { background: #0a1931; padding: 25px; margin: 15px auto; border-radius: 15px; width: 90%; cursor: pointer; transition: 0.3s; border: 1px solid #162a49; display: block; color: white; text-decoration: none; font-size: 20px; font-weight: bold; }
-        .btn-card:hover { background: #4facfe; color: #050f22; transform: translateY(-5px); box-shadow: 0 0 20px rgba(79, 172, 254, 0.4); }
-        .ad-space { background: #162a49; border: 2px dashed #4facfe; padding: 20px; margin: 20px auto; color: #4facfe; font-size: 14px; border-radius: 10px; }
-        h2 { color: #4facfe; margin: 30px 0; font-size: 28px; border-bottom: 2px solid #162a49; padding-bottom: 10px; }
-        .article-card { background: #162a49; padding: 25px; border-radius: 15px; margin: 20px auto; text-align: right; border-right: 5px solid #4facfe; line-height: 1.8; }
-        .article-card h3 { color: #4facfe; margin-top: 0; }
-        .qa-section { background: #0a1931; padding: 20px; border-radius: 15px; border: 1px solid #162a49; }
-        .qa-btn { background: #162a49; color: white; padding: 15px; margin: 10px 0; border-radius: 10px; width: 100%; text-align: right; border: none; cursor: pointer; font-size: 16px; transition: 0.3s; border-right: 4px solid transparent; }
-        .qa-btn:hover { border-right-color: #4facfe; background: #1c355e; }
-        .footer-btns { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; padding: 20px; }
-        .small-btn { background: #4facfe; color: #050f22; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px; }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background: #050f22; color: white; text-align: center; scroll-behavior: smooth; }
+        header { background: linear-gradient(135deg, #0a1931, #162a49); padding: 60px 20px; border-bottom: 4px solid #4facfe; }
+        nav { background: rgba(10, 25, 49, 0.9); padding: 15px; position: sticky; top: 0; z-index: 100; display: flex; justify-content: center; gap: 20px; backdrop-filter: blur(10px); }
+        nav a { color: #4facfe; text-decoration: none; font-weight: bold; font-size: 16px; }
+        .container { padding: 40px 20px; max-width: 900px; margin: auto; }
+        .btn-card { background: #0a1931; padding: 25px; margin: 15px auto; border-radius: 15px; width: 90%; cursor: pointer; transition: 0.3s; border: 1px solid #162a49; display: block; color: white; text-decoration: none; font-size: 20px; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .btn-card:hover { background: #4facfe; color: #050f22; transform: scale(1.02); box-shadow: 0 0 25px #4facfe; }
+        .article-card { background: #162a49; padding: 25px; border-radius: 15px; margin: 20px auto; text-align: right; border-right: 6px solid #4facfe; line-height: 1.8; }
+        .article-card h3 { color: #4facfe; font-size: 22px; margin-top: 0; }
+        .bot-box { background: #0a1931; padding: 30px; border-radius: 20px; border: 2px solid #162a49; margin-top: 20px; }
+        input { padding: 15px; width: 85%; border-radius: 10px; border: 2px solid #162a49; background: #050f22; color: white; font-size: 16px; outline: none; }
+        input:focus { border-color: #4facfe; }
+        .bot-btn { background: #4facfe; color: #050f22; padding: 12px 30px; border-radius: 10px; font-weight: bold; border: none; cursor: pointer; margin-top: 15px; font-size: 18px; }
+        #response { margin-top: 20px; padding: 15px; border-radius: 10px; background: rgba(79, 172, 254, 0.1); color: #4facfe; font-weight: bold; min-height: 50px; display: none; }
+        .ad-banner { background: #0d1b2a; border: 1px dashed #4facfe; padding: 15px; margin: 20px auto; border-radius: 10px; color: #4facfe; font-size: 12px; }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="#earn">طرق الربح</a>
-    <a href="#jobs">فرص شغل</a>
-    <a href="#articles">دروس تعليمية</a>
-    <a href="#qa">المساعد الذكي</a>
+    <a href="#earn">الربح</a>
+    <a href="#articles">مقالات تهمك</a>
+    <a href="#bot">المساعد الذكي</a>
 </nav>
 
+<header>
+    <h1>💰 منصة الشغل والفلوس 💰</h1>
+    <p>لا تنتظر الفرصة.. اصنعها بنفسك الآن!</p>
+</header>
+
+<div class="container" id="earn">
+    <h2>🚀 انطلق نحو أول دولار</h2>
+    <a href="https://mostaql.com" target="_blank" class="btn-card">🎯 ابدأ العمل الحر (مستقل)</a>
+    <a href="https://khamsat.com" target="_blank" class="btn-card">💸 بع خدماتك (خمسات)</a>
+    <a href="https://www.youtube.com/results?search_query=free+courses+to+earn+money" target="_blank" class="btn-card">🔥 كورسات مجانية للربح</a>
+</div>
+
+<div class="ad-banner">مساحة إعلانية - Google AdSense</div>
+
+<div class="container" id="articles">
+    <h2>📖 مقالات تشعل حماسك</h2>
+    
+    <div class="article-card">
+        <h3>🌟 قصة نجاح: من الصفر إلى العالمية</h3>
+        <p>هل تعلم أن أشهر مبرمجي العالم بدأوا من "يوتيوب"؟ العمل الحر ليس مجرد وظيفة، بل هو حرية. يمكنك العمل من غرفتك وتحقيق دخل يتجاوز رواتب الشركات الكبرى. السر ليس في الذكاء، بل في الاستمرار!</p>
+    </div>
+
+    <div class="article-card">
+        <h3>⚡ لماذا 2026 هو عامك الذهبي؟</h3>
+        <p>مع تطور الذكاء الاصطناعي، أصبح بإمكانك إنجاز شغل كان يأخذ أياماً في ساعات قليلة. إذا تعلمت كيف تستخدم الأدوات صح، فستكون في المقدمة. العالم الآن يبحث عن المهارة وليس الشهادة.</p>
+    </div>
+
+    <div class="article-card">
+        <h3>💰 كيف تضمن استمرار الأرباح؟</h3>
+        <p>لا تعتمد على عميل واحد. ابني لنفسك اسماً في "مستقل" و"Upwork" وانشر شغلك على "LinkedIn". التنوع هو الأمان المالي الحقيقي في عصرنا الحالي.</p>
+    </div>
+</div>
+
+<div class="container" id="bot">
+    <h2>🤖 المساعد الشخصي (رد تلقائي)</h2>
+    <div class="bot-box">
+        <p>اسألني أي شيء عن الشغل أو الفلوس وهجاوبك فوراً!</p>
+        <input type="text" id="userInput" placeholder="مثلاً: ازاي ابدأ؟ أو أفضل مجال؟">
+        <br>
+        <button class="bot-btn" onclick="askBot()">إرسال للمساعد</button>
+        <div id="response"></div>
+    </div>
+</div>
+
+<footer style="padding: 50px; background: #0a1931; border-top: 2px solid #4facfe;">
+    <p>© 2026 منصة الشغل والفلوس - جميع الحقوق محفوظة</p>
+    <div style="margin-top: 15px;">
+        <a href="https://www.google.com" style="color: #4facfe; margin: 0 10px;">سياسة الخصوصية</a>
+        <a href="https://www.google.com" style="color: #4facfe; margin: 0 10px;">اتصل بنا</a>
+    </div>
+</footer>
+
+<script>
+    function askBot() {
+        const query = document.getElementById('userInput').value.toLowerCase();
+        const resDiv = document.getElementById('response');
+        resDiv.style.display = "block";
+        
+        let answer = "🤖 اممم، سؤال جيد! ابدأ بتصفح قسم المقالات فوق وهتلاقي إجابات كتير، أو حدد سؤالك أكتر عشان أساعدك صح.";
+
+        if(query.includes("ابدأ") || query.includes("كيف")) {
+            answer = "🤖 البداية دايماً في 'مهارة واحدة'. اختار التصميم أو البرمجة وركز فيها شهر، وبعدها افتح حساب في خمسات!";
+        } else if(query.includes("فلوس") || query.includes("ربح") || query.includes("كسب")) {
+            answer = "🤖 الفلوس بتيجي لما تقدم 'قيمة'. اتعلم مهارة الناس محتاجاها، وموقع 'مستقل' هو أحسن مكان تجيب منه أول دولار.";
+        } else if(query.includes("نصب")) {
+            answer = "🤖 خلي بالك! أي موقع يطلب منك فلوس عشان يشتغل هو نصب. الشغل الحقيقي هو اللي أنت بتاخد فيه فلوس مقابل تعبك.";
+        } else if(query.includes("برمجة") || query.includes("تصميم")) {
+            answer = "🤖 ده منجم ذهب! البرمجة والتصميم هما أكتر حاجات مطلوبة. ابدأ بقنوات اليوتيوب المجانية فوراً.";
+        } else if(query.includes("يوتيوب")) {
+            answer = "🤖 اليوتيوب هو أكبر جامعة مجانية في العالم. ابحث عن 'خارطة طريق' للمجال اللي تحبه وابدأ فوراً.";
+        }
+
+        resDiv.innerText = answer;
+    }
+</script>
+
+</body>
+</html>
