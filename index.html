@@ -3,96 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة الشغل والفلوس</title>
+    <title>منصة الشغل والفلوس | دليل المبتدئين</title>
     <style>
         body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #050f22; color: white; text-align: center; scroll-behavior: smooth; }
         header { background: linear-gradient(135deg, #0a1931, #162a49); padding: 50px 20px; border-bottom: 3px solid #4facfe; }
-        nav { background: #0a1931; padding: 15px; position: sticky; top: 0; z-index: 100; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-        nav a { color: #4facfe; text-decoration: none; font-weight: bold; font-size: 14px; }
-        .container { padding: 30px 15px; }
-        .btn-card { background: #0a1931; padding: 22px; margin: 12px auto; border-radius: 12px; width: 88%; max-width: 400px; cursor: pointer; transition: 0.3s; border: 1px solid #162a49; display: block; color: white; text-decoration: none; font-size: 19px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
-        .btn-card:hover { background: #4facfe; color: #050f22; transform: translateY(-3px); box-shadow: 0 0 20px #4facfe; }
-        .ad-space { background: #162a49; border: 2px dashed #4facfe; padding: 20px; margin: 15px auto; width: 90%; color: #4facfe; border-radius: 10px; font-size: 14px; }
-        h2 { color: #4facfe; font-size: 26px; margin: 25px 0; display: flex; align-items: center; justify-content: center; gap: 10px; }
-        input { padding: 12px; width: 80%; border-radius: 8px; border: none; margin-bottom: 10px; background: white; color: black; }
-        .footer-btns { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; padding: 20px; }
-        .small-btn { background: #4facfe; color: #050f22; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; border: none; cursor: pointer; }
-        .article-box { background: #162a49; padding: 18px; border-radius: 12px; margin: 10px auto; width: 90%; max-width: 400px; border-right: 5px solid #4facfe; text-align: right; }
+        nav { background: #0a1931; padding: 15px; position: sticky; top: 0; z-index: 100; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        nav a { color: #4facfe; text-decoration: none; font-weight: bold; font-size: 16px; transition: 0.3s; }
+        nav a:hover { color: white; }
+        .container { padding: 40px 20px; max-width: 800px; margin: auto; }
+        .btn-card { background: #0a1931; padding: 25px; margin: 15px auto; border-radius: 15px; width: 90%; cursor: pointer; transition: 0.3s; border: 1px solid #162a49; display: block; color: white; text-decoration: none; font-size: 20px; font-weight: bold; }
+        .btn-card:hover { background: #4facfe; color: #050f22; transform: translateY(-5px); box-shadow: 0 0 20px rgba(79, 172, 254, 0.4); }
+        .ad-space { background: #162a49; border: 2px dashed #4facfe; padding: 20px; margin: 20px auto; color: #4facfe; font-size: 14px; border-radius: 10px; }
+        h2 { color: #4facfe; margin: 30px 0; font-size: 28px; border-bottom: 2px solid #162a49; padding-bottom: 10px; }
+        .article-card { background: #162a49; padding: 25px; border-radius: 15px; margin: 20px auto; text-align: right; border-right: 5px solid #4facfe; line-height: 1.8; }
+        .article-card h3 { color: #4facfe; margin-top: 0; }
+        .qa-section { background: #0a1931; padding: 20px; border-radius: 15px; border: 1px solid #162a49; }
+        .qa-btn { background: #162a49; color: white; padding: 15px; margin: 10px 0; border-radius: 10px; width: 100%; text-align: right; border: none; cursor: pointer; font-size: 16px; transition: 0.3s; border-right: 4px solid transparent; }
+        .qa-btn:hover { border-right-color: #4facfe; background: #1c355e; }
+        .footer-btns { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; padding: 20px; }
+        .small-btn { background: #4facfe; color: #050f22; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px; }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="#earn">فلوس</a>
-    <a href="#jobs">شغل</a>
-    <a href="#learn">تعلم</a>
-    <a href="#articles">مقالات</a>
-    <a href="#ai">مساعد</a>
+    <a href="#earn">طرق الربح</a>
+    <a href="#jobs">فرص شغل</a>
+    <a href="#articles">دروس تعليمية</a>
+    <a href="#qa">المساعد الذكي</a>
 </nav>
 
-<header>
-    <h1>💰 منصة الشغل والفلوس 💰</h1>
-    <p>ابدأ رحلتك نحو الربح والحرية المالية</p>
-</header>
-
-<div class="ad-space">مساحة إعلانية مجهزة (Google AdSense)</div>
-
-<div class="container" id="earn">
-    <h2>💰 طرق كسب المال</h2>
-    <a href="https://mostaql.com" target="_blank" class="btn-card">فريلانس (مستقل)</a>
-    <a href="https://khamsat.com" target="_blank" class="btn-card">بيع خدمات (خمسات)</a>
-    <a href="https://www.youtube.com/results?search_query=تعلم+مهارة+للربح+من+النت" target="_blank" class="btn-card">تعلم مهارة مربحة</a>
-</div>
-
-<div class="container" id="jobs">
-    <h2>💼 فرص الشغل</h2>
-    <a href="https://www.upwork.com" target="_blank" class="btn-card">شغل أونلاين (Upwork)</a>
-    <a href="https://www.wuzzuf.net" target="_blank" class="btn-card">وظائف شركات (Wuzzuf)</a>
-    <a href="https://www.freelancer.com" target="_blank" class="btn-card">عمل حر (Freelancer)</a>
-</div>
-
-<div class="ad-space">إعلان: كورسات وخدمات مميزة</div>
-
-<div class="container" id="learn">
-    <h2>📚 تعلم مهارات</h2>
-    <a href="https://www.youtube.com/results?search_query=تعلم+البرمجة+من+الصفر" target="_blank" class="btn-card">برمجة (Software)</a>
-    <a href="https://www.youtube.com/results?search_query=تعلم+التصميم+الجرافيكي" target="_blank" class="btn-card">تصميم (Design)</a>
-    <a href="https://www.youtube.com/results?search_query=تعلم+التسويق+الالكتروني+للمبتدئين" target="_blank" class="btn-card">تسويق (Marketing)</a>
-</div>
-
-<div class="container" id="articles">
-    <h2>📖 مقالات مفيدة</h2>
-    <div class="article-box">
-        <h4>💡 كيف تبدأ من الصفر؟</h4>
-        <p>السر هو التركيز في مهارة واحدة لمدة 3 شهور قبل التفكير في المال.</p>
-    </div>
-    <div class="article-box">
-        <h4>💵 أفضل طرق الربح 2026</h4>
-        <p>الذكاء الاصطناعي وصناعة المحتوى هما منجم الذهب حالياً.</p>
-    </div>
-</div>
-
-<div class="container" id="ai">
-    <h2>🤖 اسأل المساعد</h2>
-    <input type="text" placeholder="اكتب سؤالك هنا...">
-    <br>
-    <button class="small-btn" onclick="alert('جاري تشغيل محرك الذكاء الاصطناعي لمساعدتك قريباً!')">اسأل</button>
-</div>
-
-<div class="container">
-    <h2>🌐 مواقع مفيدة</h2>
-    <div class="footer-btns">
-        <a href="https://www.fiverr.com" target="_blank" class="small-btn">Fiverr</a>
-        <a href="https://www.upwork.com" target="_blank" class="small-btn">Upwork</a>
-        <a href="https://www.wuzzuf.net" target="_blank" class="small-btn">Wuzzuf</a>
-        <a href="https://www.linkedin.com" target="_blank" class="small-btn">LinkedIn</a>
-    </div>
-</div>
-
-<footer style="padding: 40px; background: #0a1931; border-top: 2px solid #4facfe; margin-top: 30px;">
-    <p>منصة الشغل والفلوس © 2026</p>
-    <p style="font-size: 12px; color: #4facfe;">كل ما تحتاجه للنجاح في مكان واحد</p>
-</footer>
-
-</body>
-</html>
