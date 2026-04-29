@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>منصة الشغل والفلوس</title>
+
+<meta name="description" content="تعلم الشغل والربح من الإنترنت والمهارات المطلوبة">
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:#050f22;
+    color:white;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(90deg,#0b2a6f,#061a3a);
+    padding:60px 20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:38px;
+}
+
+/* NAV */
+nav{
+    background:#020817;
+    padding:10px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    margin:10px;
+    text-decoration:none;
+}
+
+/* SECTIONS */
+section{
+    padding:40px 20px;
+    text-align:center;
+}
+
+.card{
+    background:#0a1f44;
+    padding:20px;
+    margin:10px;
+    border-radius:10px;
+    display:inline-block;
+    width:250px;
+}
+
+/* BUTTON */
+.btn{
+    background:#1e90ff;
+    padding:10px 20px;
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+}
+
+/* AI BOX */
+input{
+    padding:10px;
+    width:80%;
+    border-radius:8px;
+}
+
+/* FOOTER */
+footer{
+    background:#020817;
+    padding:20px;
+    text-align:center;
+    font-size:14px;
+    opacity:0.7;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- 🔝 HEADER -->
+<header>
+    <h1>💼 منصة الشغل والفلوس</h1>
+    <p>ابدأ من الصفر وابدأ رحلتك نحو الربح</p>
+</header>
+
+<!-- 🔗 NAV -->
+<nav>
+    <a href="#money">فلوس</a>
+    <a href="#jobs">شغل</a>
+    <a href="#learn">تعلم</a>
+    <a href="#blog">مقالات</a>
+    <a href="#ai">مساعد</a>
+</nav>
+
+<!-- 💰 MONEY -->
+<section id="money">
+    <h2>💰 طرق كسب المال</h2>
+
+    <div class="card">فريلانس</div>
+    <div class="card">بيع خدمات</div>
+    <div class="card">تعلم مهارة</div>
+</section>
+
+<!-- 💼 JOBS -->
+<section id="jobs">
+    <h2>💼 فرص الشغل</h2>
+
+    <div class="card">شغل أونلاين</div>
+    <div class="card">وظائف شركات</div>
+    <div class="card">عمل حر</div>
+</section>
+
+<!-- 📚 LEARN -->
+<section id="learn">
+    <h2>📚 تعلم مهارات</h2>
+
+    <div class="card">برمجة</div>
+    <div class="card">تصميم</div>
+    <div class="card">تسويق</div>
+</section>
+
+<!-- 📖 BLOG -->
+<section id="blog">
+    <h2>📖 مقالات مفيدة</h2>
+
+    <div class="card">
+        <h3>كيف تبدأ من الصفر؟</h3>
+        <p>ابدأ بتعلم مهارة واحدة فقط وركز عليها</p>
+    </div>
+
+    <div class="card">
+        <h3>أفضل طرق الربح</h3>
+        <p>الفريلانس من أسهل الطرق للبدء</p>
+    </div>
+
+</section>
+
+<!-- 🤖 AI -->
+<section id="ai">
+    <h2>🤖 اسأل المساعد</h2>
+
+    <input id="q" placeholder="اكتب سؤالك">
+    <br><br>
+    <button onclick="ask()" class="btn">اسأل</button>
+
+    <p id="res"></p>
+</section>
+
+<!-- 📢 ADS -->
+<section>
+    <h2>📢 إعلانات</h2>
+    <p>سيتم عرض إعلانات هنا بعد قبول AdSense</p>
+</section>
+
+<!-- 🌐 LINKS -->
+<section>
+    <h2>🌐 مواقع مفيدة</h2>
+
+    <a class="btn" href="https://www.fiverr.com">Fiverr</a>
+    <a class="btn" href="https://www.upwork.com">Upwork</a>
+    <a class="btn" href="https://wuzzuf.net">Wuzzuf</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 منصة الشغل والفلوس
+</footer>
+
+<script>
+
+function ask(){
+
+let t = document.getElementById("q").value.toLowerCase();
+let r = "";
+
+if(t.includes("فلوس")){
+r="💰 تعلم مهارة وابدأ فريلانس";
+}
+else if(t.includes("شغل")){
+r="💼 استخدم مواقع مثل Fiverr و Upwork";
+}
+else if(t.includes("تعلم")){
+r="📚 ابدأ بالبرمجة أو التصميم";
+}
+else{
+r="🤔 حاول تسأل عن شغل أو فلوس";
+}
+
+document.getElementById("res").innerHTML=r;
+
+}
+
+</script>
+
+</body>
+</html>
