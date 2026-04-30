@@ -3,235 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="منصة الشغل والفلوس - الدليل الشامل لتعلم البرمجة، التسويق، والعمل الحر والربح من الإنترنت 2026">
+    <meta name="description" content="منصة الشغل والفلوس - الموسوعة العربية الشاملة للربح من الإنترنت والعمل الحر 2026">
     <meta name="google-site-verification" content="f80v2_f9oT1R4xL_T5o9-code-verification-here">
-    <title>منصة الشغل والفلوس | الأكاديمية الشاملة 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>منصة الشغل والفلوس | الأكاديمية العالمية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --main-blue: #0052D4;
-            --main-grad: linear-gradient(to right, #4364f7, #6fb1fc, #0052D4);
-            --dark-blue: #1e272e;
-            --success-green: #05c46b;
-            --white: #ffffff;
-            --light-gray: #f4f7f6;
+            --primary: #0062ff;
+            --secondary: #0f172a;
+            --accent: #38bdf8;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --bg: #ffffff;
+            --text-main: #1e293b;
+            --glass: rgba(255, 255, 255, 0.95);
         }
 
-        body {
-            font-family: 'Cairo', sans-serif;
-            background-color: var(--light-gray);
-            color: var(--dark-blue);
-            margin: 0;
-            padding: 0;
-            line-height: 1.8;
-        }
+        body { font-family: 'Cairo', sans-serif; background: #f1f5f9; color: var(--text-main); margin: 0; padding: 0; scroll-behavior: smooth; }
+        
+        /* Navigation */
+        nav { background: var(--glass); backdrop-filter: blur(10px); padding: 15px 5%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 900; font-size: 1.5rem; color: var(--primary); }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
 
         /* Hero Section */
-        .hero {
-            background: var(--main-grad);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-        }
+        header { background: radial-gradient(circle at top right, #0062ff, #003b99); color: white; padding: 120px 20px; text-align: center; clip-path: ellipse(150% 100% at 50% 0%); }
+        header h1 { font-size: 4rem; margin: 0; font-weight: 900; text-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        header p { font-size: 1.5rem; max-width: 800px; margin: 25px auto; line-height: 1.6; opacity: 0.9; }
+        .hero-btns { display: flex; justify-content: center; gap: 15px; margin-top: 30px; }
+        .hero-btn { padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.4s; }
+        .btn-white { background: white; color: var(--primary); }
+        .btn-outline-white { border: 2px solid white; color: white; }
 
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; font-weight: 900; }
-        .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 30px; }
+        .container { max-width: 1200px; margin: -80px auto 60px; padding: 0 20px; }
 
-        .container { max-width: 1100px; margin: -50px auto 40px; padding: 20px; }
+        /* Main Section Cards */
+        .section { background: white; border-radius: 30px; padding: 50px; margin-bottom: 50px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .section-title { font-size: 2.2rem; margin-bottom: 40px; position: relative; padding-right: 20px; color: var(--secondary); }
+        .section-title::after { content: ''; position: absolute; right: 0; top: 15%; height: 70%; width: 6px; background: var(--primary); border-radius: 10px; }
 
-        /* Statistics Bar */
-        .stats-bar {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-            text-align: center;
-        }
+        /* Detailed Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .skill-card { border: 1px solid #e2e8f0; border-radius: 25px; padding: 30px; transition: 0.5s; background: #fff; }
+        .skill-card:hover { transform: translateY(-15px); border-color: var(--primary); box-shadow: 0 25px 50px -12px rgba(0, 98, 255, 0.2); }
+        .skill-card h3 { font-size: 1.4rem; color: var(--primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .skill-card ul { padding: 0; list-style: none; margin: 20px 0; }
+        .skill-card li { margin-bottom: 12px; display: flex; align-items: center; gap: 10px; font-size: 0.95rem; }
+        .skill-card li::before { content: '✔'; color: var(--success); font-weight: bold; }
 
-        .stat-item h2 { color: var(--main-blue); margin: 0; font-size: 2rem; }
+        /* Buttons */
+        .action-btn { display: block; width: 100%; padding: 14px; text-align: center; border-radius: 15px; text-decoration: none; font-weight: 700; margin-top: 10px; transition: 0.3s; }
+        .btn-blue { background: var(--primary); color: white; }
+        .btn-yt { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .btn-yt:hover { background: #dc2626; color: white; }
 
-        /* Section Styling */
-        .section-box {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
+        /* AI Bot Widget */
+        #ai-system { position: fixed; bottom: 40px; right: 40px; z-index: 2000; }
+        #ai-toggle { background: linear-gradient(135deg, #0062ff, #00d2ff); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 15px 30px rgba(0, 98, 255, 0.4); transition: 0.4s; border: 4px solid white; }
+        #ai-toggle:hover { transform: scale(1.1) rotate(10deg); }
+        
+        #ai-chat-window { display: none; width: 400px; height: 600px; background: white; border-radius: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.25); position: absolute; bottom: 90px; right: 0; flex-direction: column; overflow: hidden; border: 1px solid #e2e8f0; animation: slideUp 0.4s ease; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .chat-header { background: var(--secondary); color: white; padding: 25px; display: flex; justify-content: space-between; align-items: center; }
+        .chat-messages { flex: 1; padding: 20px; overflow-y: auto; background: #f8fafc; display: flex; flex-direction: column; gap: 15px; }
+        .msg { padding: 15px 20px; border-radius: 20px; max-width: 85%; line-height: 1.5; font-size: 0.95rem; }
+        .bot { background: white; border: 1px solid #e2e8f0; align-self: flex-start; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+        .user { background: var(--primary); color: white; align-self: flex-end; }
+        
+        .chat-input { padding: 20px; border-top: 1px solid #e2e8f0; display: flex; gap: 10px; background: white; }
+        .chat-input input { flex: 1; border: 2px solid #f1f5f9; padding: 12px 20px; border-radius: 15px; outline: none; font-family: 'Cairo'; }
+        .chat-input input:focus { border-color: var(--primary); }
 
-        h2.title {
-            color: var(--main-blue);
-            border-right: 5px solid var(--main-blue);
-            padding-right: 15px;
-            margin-bottom: 25px;
-        }
-
-        /* Roadmap Grid */
-        .roadmap-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .step-card {
-            background: #fff;
-            border: 1px solid #eee;
-            padding: 20px;
-            border-radius: 12px;
-            position: relative;
-            transition: 0.3s;
-        }
-        .step-card:hover { border-color: var(--main-blue); transform: scale(1.02); }
-        .step-num {
-            position: absolute; top: -10px; left: -10px;
-            background: var(--success-green); color: white;
-            width: 35px; height: 35px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center; font-weight: bold;
-        }
-
-        /* Buttons Style */
-        .btn-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
-        .btn-action {
-            padding: 10px 20px;
-            background: var(--main-blue);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            flex-grow: 1;
-            text-align: center;
-        }
-        .btn-action.yt { background: #ff3f34; }
-        .btn-action.tools { background: #05c46b; }
-
-        /* Testimonials */
-        .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .testi-box { background: #f9f9f9; padding: 20px; border-radius: 10px; border-bottom: 3px solid var(--main-blue); }
-
-        footer { background: var(--dark-blue); color: white; text-align: center; padding: 40px 20px; margin-top: 50px; }
+        footer { background: var(--secondary); color: white; padding: 80px 20px; text-align: center; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .testimonial-grid { grid-template-columns: 1fr; }
+            header h1 { font-size: 2.5rem; }
+            #ai-chat-window { width: 90vw; right: -20px; height: 500px; }
         }
     </style>
 </head>
 <body>
 
-<div class="hero">
-    <h1>عالم الشغل والفلوس 🌍</h1>
-    <p>منصتك المتكاملة للانتقال من مرحلة التشتت إلى الاحتراف والقبض بالدولار</p>
-</div>
+<nav>
+    <div class="logo">منصة الشغل 2026</div>
+    <div class="nav-links">
+        <a href="#roadmap">خارطة الطريق</a>
+        <a href="#market">منصات العمل</a>
+        <a href="#tools">أدوات ذكية</a>
+    </div>
+</nav>
+
+<header>
+    <h1>عالم المال والاحتراف 💰</h1>
+    <p>أكبر موسوعة عربية متخصصة في تعليم المهارات الرقمية وتوجيه الشباب نحو أول 1000$ من الإنترنت.</p>
+    <div class="hero-btns">
+        <a href="#roadmap" class="hero-btn btn-white">ابدأ التعلم الآن</a>
+        <a href="#market" class="hero-btn btn-outline-white">تصفح الفرص</a>
+    </div>
+</header>
 
 <div class="container">
-    
-    <div class="stats-bar">
-        <div class="stat-item"><h2>+50</h2><p>خارطة طريق</p></div>
-        <div class="stat-item"><h2>+100</h2><p>أداة مجانية</p></div>
-        <div class="stat-item"><h2>24/7</h2><p>دعم وتوجيه</p></div>
-        <div class="stat-item"><h2>مجاني</h2><p>للمحتوى بالكامل</p></div>
-    </div>
 
-    <div class="section-box">
-        <h2 class="title">📍 من أين أبدأ؟ (خارطة الطريق)</h2>
-        <div class="roadmap-grid">
-            <div class="step-card">
-                <div class="step-num">1</div>
-                <h3>تعلم البرمجة</h3>
-                <p>ابدأ بـ HTML/CSS ثم JavaScript. هي اللغة الأساسية لبناء أي موقع.</p>
-                <div class="btn-group">
-                    <a href="https://www.youtube.com/@ElzeroWebSchool" class="btn-action yt">أكاديمية الزيرو</a>
-                </div>
+    <section class="section" id="roadmap">
+        <h2 class="section-title">🚀 مهارات مطلوبة بشدة (خارطة الطريق)</h2>
+        <div class="grid">
+            <div class="card skill-card">
+                <h3>💻 تطوير الويب (Full Stack)</h3>
+                <p>اللغة الأساسية لبناء المستقبل الرقمي.</p>
+                <ul>
+                    <li>تعلم HTML5/CSS3 لتصميم الواجهات.</li>
+                    <li>اتقان JavaScript و React للتفاعل.</li>
+                    <li>بناء السيرفرات باستخدام Node.js.</li>
+                </ul>
+                <a href="https://www.youtube.com/@ElzeroWebSchool" class="action-btn btn-yt">مدرسة الزيرو - المسار الكامل</a>
+                <a href="https://www.youtube.com/@CodeZilla" class="action-btn btn-yt">كود زيلا - تعلم ببساطة</a>
             </div>
-            <div class="step-card">
-                <div class="step-num">2</div>
-                <h3>التسويق بالعمولة</h3>
-                <p>تعلم كيف تبيع منتجات غيرك مقابل عمولة ضخمة من خلال المحتوى.</p>
-                <div class="btn-group">
-                    <a href="https://www.youtube.com/@AhmedAbuZaid" class="btn-action yt">أحمد أبو زيد</a>
-                </div>
+
+            <div class="card skill-card">
+                <h3>📱 التسويق بالعمولة و Dropshipping</h3>
+                <p>كيف تبني تجارة بدون رأس مال ضخم.</p>
+                <ul>
+                    <li>فهم نظام الأفلييت (Affiliate).</li>
+                    <li>بناء متاجر Shopify و WooCommerce.</li>
+                    <li>عمل إعلانات ممولة (Facebook/TikTok).</li>
+                </ul>
+                <a href="https://www.youtube.com/@HichamKasbaoui" class="action-btn btn-yt">هشام قصباوي - خبير الأفلييت</a>
+                <a href="https://www.youtube.com/@DroosOnline" class="action-btn btn-yt">دروس أونلاين - مهارات البيع</a>
             </div>
-            <div class="step-card">
-                <div class="step-num">3</div>
-                <h3>العمل الحر (Freelance)</h3>
-                <p>كيف تعرض مهاراتك وتجذب العملاء في المنصات العالمية.</p>
-                <div class="btn-group">
-                    <a href="https://mostaql.com/" class="btn-action">مستقل</a>
-                    <a href="https://www.upwork.com/" class="btn-action">Upwork</a>
-                </div>
+
+            <div class="card skill-card">
+                <h3>🎬 المونتاج وصناعة المحتوى</h3>
+                <p>أسرع مهارة يمكن تحويلها لدخل مادي اليوم.</p>
+                <ul>
+                    <li>اتقان Adobe Premiere و CapCut.</li>
+                    <li>تعلم كتابة السيناريو (Storytelling).</li>
+                    <li>تعديل الصوت الاحترافي.</li>
+                </ul>
+                <a href="https://www.youtube.com/@AhmedAbuZaid" class="action-btn btn-yt">أحمد أبو زيد - أسرار اليوتيوب</a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section-box">
-        <h2 class="title">🛠️ أدوات لا غنى عنها للمحترفين</h2>
-        <div class="roadmap-grid">
-            <div class="step-card">
-                <h3>أدوات الذكاء الاصطناعي</h3>
-                <p>لزيادة إنتاجيتك 10 أضعاف في كتابة المحتوى والأكواد.</p>
-                <div class="btn-group">
-                    <a href="https://chatgpt.com/" class="btn-action tools">ChatGPT</a>
-                    <a href="https://claude.ai/" class="btn-action tools">Claude AI</a>
-                </div>
+    <section class="section" id="market">
+        <h2 class="section-title">🌍 أين تبيع مهاراتك؟ (منصات الثقة)</h2>
+        <div class="grid">
+            <div class="skill-card">
+                <h3 style="color:var(--success)">✅ المنصات العربية</h3>
+                <p>أفضل مكان لتبدأ فيه رحلتك بلغة عربية وسهولة في التعامل.</p>
+                <a href="https://mostaql.com/" class="action-btn btn-blue">منصة مستقل - للمشاريع الكبيرة</a>
+                <a href="https://khamsat.com/" class="action-btn btn-blue" style="background:#22c55e">منصة خمسات - للخدمات المصغرة</a>
+                <a href="https://www.kafiil.com/" class="action-btn btn-blue" style="background:#1e293b">منصة كفيل</a>
             </div>
-            <div class="step-card">
-                <h3>أدوات التصميم والمونتاج</h3>
-                <p>اصنع تصاميمك وفيديوهاتك باحترافية وبسهولة.</p>
-                <div class="btn-group">
-                    <a href="https://www.canva.com/" class="btn-action tools">Canva</a>
-                    <a href="https://www.capcut.com/" class="btn-action tools">CapCut</a>
-                </div>
-            </div>
-            <div class="step-card">
-                <h3>المحافظ الإلكترونية</h3>
-                <p>طرق استلام فلوسك من أي مكان في العالم.</p>
-                <div class="btn-group">
-                    <a href="https://www.paypal.com/" class="btn-action">PayPal</a>
-                    <a href="https://www.payoneer.com/" class="btn-action">Payoneer</a>
-                </div>
+            <div class="skill-card">
+                <h3 style="color:var(--warning)">🔥 المنصات العالمية</h3>
+                <p>للمحترفين الذين يطمحون للدخل المرتفع بالدولار.</p>
+                <a href="https://www.upwork.com/" class="action-btn btn-blue" style="background:#14a800">Upwork - منجم الذهب</a>
+                <a href="https://www.fiverr.com/" class="action-btn btn-blue" style="background:#1dbf73">Fiverr - اعرض خدمتك عالمياً</a>
+                <a href="https://www.freelancer.com/" class="action-btn btn-blue" style="background:#29b2fe">Freelancer.com</a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section-box">
-        <h2 class="title">❓ أسئلة تدور في عقلك</h2>
-        <details style="margin-bottom: 10px; cursor: pointer;">
-            <summary><b>هل أحتاج لغة إنجليزية قوية؟</b></summary>
-            <p>للبداية في المنصات العربية لا تحتاج، لكن للوصول للعالمية تحتاج إنجليزية متوسطة.</p>
-        </details>
-        <details style="margin-bottom: 10px; cursor: pointer;">
-            <summary><b>كم من الوقت أحتاج لأحقق أول دولار؟</b></summary>
-            <p>يعتمد على التزامك، الملتزمون عادة يحققون نتائج في أول 3 أشهر.</p>
-        </details>
-    </div>
-
-    <div class="section-box">
-        <h2 class="title">⭐ قصص نجاح حقيقية</h2>
-        <div class="testimonial-grid">
-            <div class="testi-box">
-                <p>"المنصة دي كانت نقطة التحول، كل الروابط والدروس اللي كنت بدور عليها لقيتها مجمعة هنا."</p>
-                <strong>- إبراهيم خليل (مبرمج واجهات)</strong>
+    <section class="section" id="tools">
+        <h2 class="section-title">🛠️ أدوات الذكاء الاصطناعي والمحافظ</h2>
+        <div class="grid">
+            <div class="skill-card">
+                <h3>🤖 مساعدو الذكاء الاصطناعي</h3>
+                <a href="https://chatgpt.com/" class="action-btn btn-blue">ChatGPT - مساعدك في كل شيء</a>
+                <a href="https://claude.ai/" class="action-btn btn-blue">Claude AI - لكتابة الأكواد بدقة</a>
+                <a href="https://www.midjourney.com/" class="action-btn btn-blue">Midjourney - لتصميم الصور خرافية</a>
             </div>
-            <div class="testi-box">
-                <p>"شكر خاص لصاحب المنصة، الترتيب ده وفر عليا شهور من التوهان في اليوتيوب."</p>
-                <strong>- مريم يوسف (مسوقة إلكترونية)</strong>
+            <div class="skill-card">
+                <h3>💳 استلام الفلوس (بدون تعقيد)</h3>
+                <a href="https://www.paypal.com/" class="action-btn btn-blue" style="background:#003087">PayPal - المحفظة الأشهر</a>
+                <a href="https://www.payoneer.com/" class="action-btn btn-blue" style="background:#ff4800">Payoneer - لاستلام أرباح الشركات</a>
+                <a href="https://www.binance.com/" class="action-btn btn-blue" style="background:#f3ba2f; color:#000">Binance - للعملات الرقمية</a>
             </div>
         </div>
-    </div>
+    </section>
 
+</div>
+
+<div id="ai-system">
+    <div id="ai-chat-window">
+        <div class="chat-header">
+            <div>
+                <strong>Gemini Pro Plus 🚀</strong>
+                <div style="font-size: 11px; opacity: 0.8;">الذكاء الاصطناعي في خدمتك دائماً</div>
+            </div>
+            <span style="cursor:pointer; font-size: 24px;" onclick="toggleChat()">×</span>
+        </div>
+        <div class="chat-messages" id="chat-flow">
+            <div class="msg bot">مرحباً بك يا بطل! أنا محرك الذكاء الاصطناعي الخاص بالمنصة. أخبرني، ما هو هدفك المالي لهذا العام وسأضع لك الخطة المناسبة؟</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="اسألني عن أي مهارة أو طريقة ربح...">
+            <button onclick="handleChat()" style="background:var(--primary); color:white; border:none; padding:10px 20px; border-radius:12px; cursor:pointer; font-weight:700;">إرسال</button>
+        </div>
+    </div>
+    <div id="ai-toggle" onclick="toggleChat()">
+        <img src="https://cdn-icons-png.flaticon.com/512/2040/2040946.png" width="35" style="filter:invert(1)">
+    </div>
 </div>
 
 <footer>
-    <h3>منصة الشغل والفلوس</h3>
-    <p>بوابتك الرسمية لمستقبل مالي أفضل</p>
-    <p style="opacity: 0.7;">جميع الحقوق محفوظة © 2026</p>
+    <h2>منصة الشغل والفلوس</h2>
+    <p>تم تصميم هذه المنصة لتكون دليلك الأول والأخير في عالم العمل الحر.</p>
+    <div style="margin-top: 30px; opacity: 0.5; font-size: 0.8rem;">
+        جميع الحقوق محفوظة © 2026 - صناعة المحتوى الهادف
+    </div>
 </footer>
+
+<script>
+    function toggleChat() {
+        const win = document.getElementById('ai-chat-window');
+        win.style.display = (win.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    function handleChat() {
+        const input = document.getElementById('user-input');
+        const flow = document.getElementById('chat-flow');
+        if(!input.value.trim()) return;
+
+        // User message
+        const u = document.createElement('div');
+        u.className = 'msg user';
+        u.innerText = input.value;
+        flow.appendChild(u);
+
+        // Logic
+        const text = input.value.toLowerCase();
+        let reply = "بناءً على تحليلي، أنصحك بالبدء في تعلم مهارة مطلوبة مثل 'تطوير المواقع' أو 'التسويق'، ثم التوجه لمنصة Upwork. هل تريد روابط لمسارات تعليمية محددة؟";
+
+        if(text.includes("برمج") || text.includes("كود")) reply = "البرمجة اختيار ذكي! ابدأ بمسار 'أسامة الزيرو' الموجود في قسم خارطة الطريق فوق، فهو يبدأ معك من الصفر المطلق.";
+        if(text.includes("فلوس") || text.includes("ربح")) reply = "المال نتيجة للمهارة. اتقن 'التصميم' أو 'المونتاج' أولاً، ثم اعرض خدماتك في 'خمسات' بـ 5$ كبداية لتجمع التقييمات.";
+        if(text.includes("تسويق")) reply = "التسويق بالعمولة (Affiliate Marketing) هو أسرع طريق للربح إذا كنت تجيد الإقناع. انصحك بمتابعة قناة 'هشام قصباوي'.";
+
+        setTimeout(() => {
+            const b = document.createElement('div');
+            b.className = 'msg bot';
+            b.innerText = reply;
+            flow.appendChild(b);
+            flow.scrollTop = flow.scrollHeight;
+        }, 600);
+
+        input.value = "";
+        flow.scrollTop = flow.scrollHeight;
+    }
+</script>
 
 </body>
 </html>
