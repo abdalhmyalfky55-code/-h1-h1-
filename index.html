@@ -3,100 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة الشغل والفلوس | الموسوعة الرقمية الشاملة 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <meta name="description" content="منصة الشغل والفلوس - الدليل الشامل لتعلم البرمجة، التسويق، والعمل الحر والربح من الإنترنت 2026">
+    <meta name="google-site-verification" content="f80v2_f9oT1R4xL_T5o9-code-verification-here">
+    <title>منصة الشغل والفلوس | الأكاديمية الشاملة 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0062ff;
-            --dark: #0f172a;
-            --accent: #f59e0b;
-            --success: #10b981;
-            --danger: #ef4444;
-            --voda: #e60000;
-            --bg: #f8fafc;
+            --main-blue: #0052D4;
+            --main-grad: linear-gradient(to right, #4364f7, #6fb1fc, #0052D4);
+            --dark-blue: #1e272e;
+            --success-green: #05c46b;
+            --white: #ffffff;
+            --light-gray: #f4f7f6;
         }
 
-        body { font-family: 'Cairo', sans-serif; background: var(--bg); margin: 0; color: var(--dark); transition: 0.3s; }
-        .dark-mode { --bg: #0f172a; --dark: #f8fafc; background: #0f172a; color: #f8fafc; }
-        .dark-mode .section-box { background: #1e293b; border-color: #334155; color: white; }
-        .dark-mode .card { background: #334155; border-color: #475569; }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--dark-blue);
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
 
-        /* Navbar */
-        nav { background: var(--primary); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        nav .logo { font-weight: 900; font-size: 1.5rem; color: white; }
-        .nav-btns { display: flex; gap: 15px; }
-        .mode-toggle { cursor: pointer; background: white; border: none; padding: 5px 15px; border-radius: 20px; font-weight: bold; }
+        /* Hero Section */
+        .hero {
+            background: var(--main-grad);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
 
-        header { background: linear-gradient(135deg, #1e293b, #0062ff); color: white; padding: 100px 20px; text-align: center; }
-        header h1 { font-size: 3.5rem; margin: 0; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-        header p { font-size: 1.3rem; opacity: 0.9; max-width: 700px; margin: 20px auto; }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; font-weight: 900; }
+        .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 30px; }
 
-        .search-area { max-width: 600px; margin: -30px auto 40px; }
-        .search-area input { width: 100%; padding: 20px; border-radius: 50px; border: none; box-shadow: 0 10px 25px rgba(0,0,0,0.1); font-size: 1rem; outline: none; }
+        .container { max-width: 1100px; margin: -50px auto 40px; padding: 20px; }
 
-        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+        /* Statistics Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
 
-        .section-box { background: white; border-radius: 25px; padding: 40px; margin-bottom: 50px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .section-title { font-size: 2rem; margin-bottom: 35px; color: var(--primary); border-right: 8px solid var(--accent); padding-right: 15px; }
+        .stat-item h2 { color: var(--main-blue); margin: 0; font-size: 2rem; }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 30px; }
-        .card { background: #fff; border: 1px solid #eef2f6; border-radius: 20px; padding: 30px; transition: 0.4s; position: relative; overflow: hidden; }
-        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
-        .card h3 { margin-top: 0; color: var(--primary); font-size: 1.4rem; }
-        .card p { font-size: 0.95rem; color: #64748b; line-height: 1.8; margin-bottom: 25px; }
+        /* Section Styling */
+        .section-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
 
-        /* Buttons Array */
-        .btn-stack { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        .btn { padding: 12px; text-align: center; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 0.9rem; transition: 0.3s; border: none; cursor: pointer; }
-        .btn-main { background: var(--primary); color: white; }
-        .btn-yt { background: #fff1f1; color: var(--voda); border: 1px solid #ffcccc; }
-        .btn-dark { background: var(--dark); color: white; }
-        .btn-ai { background: linear-gradient(45deg, #8b5cf6, #3b82f6); color: white; }
+        h2.title {
+            color: var(--main-blue);
+            border-right: 5px solid var(--main-blue);
+            padding-right: 15px;
+            margin-bottom: 25px;
+        }
 
-        /* Wallet Section Special */
-        .wallet-hub { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px; }
-        .wallet-item { padding: 20px; border-radius: 15px; text-align: center; color: white; font-weight: 900; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        /* Roadmap Grid */
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
 
-        /* Review Section */
-        .review-strip { background: #f1f5f9; padding: 20px; border-radius: 15px; border-right: 5px solid var(--success); margin-bottom: 15px; }
+        .step-card {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 12px;
+            position: relative;
+            transition: 0.3s;
+        }
+        .step-card:hover { border-color: var(--main-blue); transform: scale(1.02); }
+        .step-num {
+            position: absolute; top: -10px; left: -10px;
+            background: var(--success-green); color: white;
+            width: 35px; height: 35px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-weight: bold;
+        }
 
-        /* Chat Widget */
-        #chat-bot { position: fixed; bottom: 30px; left: 30px; z-index: 2000; }
-        #chat-open { background: var(--primary); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-        #chat-win { display: none; width: 380px; height: 550px; background: white; border-radius: 20px; position: absolute; bottom: 85px; left: 0; box-shadow: 0 20px 50px rgba(0,0,0,0.2); flex-direction: column; overflow: hidden; }
-        .chat-h { background: var(--primary); color: white; padding: 20px; font-weight: bold; display: flex; justify-content: space-between; }
-        .chat-b { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; background: #f8fafc; }
-        .chat-f { padding: 15px; border-top: 1px solid #eee; display: flex; gap: 10px; }
-        .chat-f input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 10px; outline: none; }
+        /* Buttons Style */
+        .btn-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+        .btn-action {
+            padding: 10px 20px;
+            background: var(--main-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            flex-grow: 1;
+            text-align: center;
+        }
+        .btn-action.yt { background: #ff3f34; }
+        .btn-action.tools { background: #05c46b; }
 
-        footer { background: #0f172a; color: white; padding: 60px 20px; text-align: center; }
+        /* Testimonials */
+        .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .testi-box { background: #f9f9f9; padding: 20px; border-radius: 10px; border-bottom: 3px solid var(--main-blue); }
 
-        @media (max-width: 768px) { header h1 { font-size: 2.2rem; } .grid { grid-template-columns: 1fr; } #chat-win { width: 90vw; } }
+        footer { background: var(--dark-blue); color: white; text-align: center; padding: 40px 20px; margin-top: 50px; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .testimonial-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
 
-<nav>
-    <div class="logo">أكاديمية الشغل 2026</div>
-    <div class="nav-btns">
-        <button class="mode-toggle" onclick="document.body.classList.toggle('dark-mode')">🌙 الوضع الليلي</button>
-    </div>
-</nav>
-
-<header>
-    <h1>طريقك المباشر للمال والاحتراف 💰</h1>
-    <p>الموسوعة العربية الأكبر المخصصة لتعليم الشباب طرق الربح الحقيقية وسحب الأرباح في مصر.</p>
-</header>
-
-<div class="search-area">
-    <input type="text" id="searchInput" onkeyup="filterContent()" placeholder="ابحث عن مهارة، منصة، أو طريقة سحب...">
+<div class="hero">
+    <h1>عالم الشغل والفلوس 🌍</h1>
+    <p>منصتك المتكاملة للانتقال من مرحلة التشتت إلى الاحتراف والقبض بالدولار</p>
 </div>
 
 <div class="container">
+    
+    <div class="stats-bar">
+        <div class="stat-item"><h2>+50</h2><p>خارطة طريق</p></div>
+        <div class="stat-item"><h2>+100</h2><p>أداة مجانية</p></div>
+        <div class="stat-item"><h2>24/7</h2><p>دعم وتوجيه</p></div>
+        <div class="stat-item"><h2>مجاني</h2><p>للمحتوى بالكامل</p></div>
+    </div>
 
-    <section class="section-box">
-        <h2 class="section-title">🏆 أهم منصات العمل الحر (مواقع رسمية)</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Upwork & Fiverr</h3>
-                <p>العمالقة في السوق العالمي. إذا كان لديك مهارة متوسطة ولغة إنجليزية، هذا
+    <div class="section-box">
+        <h2 class="title">📍 من أين أبدأ؟ (خارطة الطريق)</h2>
+        <div class="roadmap-grid">
+            <div class="step-card">
+                <div class="step-num">1</div>
+                <h3>تعلم البرمجة</h3>
+                <p>ابدأ بـ HTML/CSS ثم JavaScript. هي اللغة الأساسية لبناء أي موقع.</p>
+                <div class="btn-group">
+                    <a href="https://www.youtube.com/@ElzeroWebSchool" class="btn-action yt">أكاديمية الزيرو</a>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-num">2</div>
+                <h3>التسويق بالعمولة</h3>
+                <p>تعلم كيف تبيع منتجات غيرك مقابل عمولة ضخمة من خلال المحتوى.</p>
+                <div class="btn-group">
+                    <a href="https://www.youtube.com/@AhmedAbuZaid" class="btn-action yt">أحمد أبو زيد</a>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-num">3</div>
+                <h3>العمل الحر (Freelance)</h3>
+                <p>كيف تعرض مهاراتك وتجذب العملاء في المنصات العالمية.</p>
+                <div class="btn-group">
+                    <a href="https://mostaql.com/" class="btn-action">مستقل</a>
+                    <a href="https://www.upwork.com/" class="btn-action">Upwork</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-box">
+        <h2 class="title">🛠️ أدوات لا غنى عنها للمحترفين</h2>
+        <div class="roadmap-grid">
+            <div class="step-card">
+                <h3>أدوات الذكاء الاصطناعي</h3>
+                <p>لزيادة إنتاجيتك 10 أضعاف في كتابة المحتوى والأكواد.</p>
+                <div class="btn-group">
+                    <a href="https://chatgpt.com/" class="btn-action tools">ChatGPT</a>
+                    <a href="https://claude.ai/" class="btn-action tools">Claude AI</a>
+                </div>
+            </div>
+            <div class="step-card">
+                <h3>أدوات التصميم والمونتاج</h3>
+                <p>اصنع تصاميمك وفيديوهاتك باحترافية وبسهولة.</p>
+                <div class="btn-group">
+                    <a href="https://www.canva.com/" class="btn-action tools">Canva</a>
+                    <a href="https://www.capcut.com/" class="btn-action tools">CapCut</a>
+                </div>
+            </div>
+            <div class="step-card">
+                <h3>المحافظ الإلكترونية</h3>
+                <p>طرق استلام فلوسك من أي مكان في العالم.</p>
+                <div class="btn-group">
+                    <a href="https://www.paypal.com/" class="btn-action">PayPal</a>
+                    <a href="https://www.payoneer.com/" class="btn-action">Payoneer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-box">
+        <h2 class="title">❓ أسئلة تدور في عقلك</h2>
+        <details style="margin-bottom: 10px; cursor: pointer;">
+            <summary><b>هل أحتاج لغة إنجليزية قوية؟</b></summary>
+            <p>للبداية في المنصات العربية لا تحتاج، لكن للوصول للعالمية تحتاج إنجليزية متوسطة.</p>
+        </details>
+        <details style="margin-bottom: 10px; cursor: pointer;">
+            <summary><b>كم من الوقت أحتاج لأحقق أول دولار؟</b></summary>
+            <p>يعتمد على التزامك، الملتزمون عادة يحققون نتائج في أول 3 أشهر.</p>
+        </details>
+    </div>
+
+    <div class="section-box">
+        <h2 class="title">⭐ قصص نجاح حقيقية</h2>
+        <div class="testimonial-grid">
+            <div class="testi-box">
+                <p>"المنصة دي كانت نقطة التحول، كل الروابط والدروس اللي كنت بدور عليها لقيتها مجمعة هنا."</p>
+                <strong>- إبراهيم خليل (مبرمج واجهات)</strong>
+            </div>
+            <div class="testi-box">
+                <p>"شكر خاص لصاحب المنصة، الترتيب ده وفر عليا شهور من التوهان في اليوتيوب."</p>
+                <strong>- مريم يوسف (مسوقة إلكترونية)</strong>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <h3>منصة الشغل والفلوس</h3>
+    <p>بوابتك الرسمية لمستقبل مالي أفضل</p>
+    <p style="opacity: 0.7;">جميع الحقوق محفوظة © 2026</p>
+</footer>
+
+</body>
+</html>
