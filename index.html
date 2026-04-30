@@ -5,117 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>منصة الشغل والفلوس | الدليل الشامل 2026</title>
     <style>
-        body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background: #050f22; color: white; text-align: center; scroll-behavior: smooth; }
-        header { background: linear-gradient(135deg, #0a1931, #162a49); padding: 50px 20px; border-bottom: 4px solid #4facfe; }
+        :root { --primary: #4facfe; --yt: #ff0000; --bg: #050f22; --card: #0a1931; --text: #ffffff; }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg); color: var(--text); text-align: center; scroll-behavior: smooth; }
+        header { background: linear-gradient(135deg, #0a1931, #162a49); padding: 60px 20px; border-bottom: 4px solid var(--primary); }
         nav { background: rgba(10, 25, 49, 0.95); padding: 15px; position: sticky; top: 0; z-index: 100; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; backdrop-filter: blur(10px); }
-        nav a { color: #4facfe; text-decoration: none; font-weight: bold; font-size: 14px; }
+        nav a { color: var(--primary); text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.3s; }
+        nav a:hover { color: white; }
         .container { padding: 30px 15px; max-width: 900px; margin: auto; }
-        .btn-card { background: #0a1931; padding: 20px; margin: 10px auto; border-radius: 12px; width: 90%; cursor: pointer; transition: 0.3s; border: 1px solid #162a49; display: block; color: white; text-decoration: none; font-size: 18px; font-weight: bold; text-align: center; }
-        .btn-card:hover { background: #4facfe; color: #050f22; transform: translateY(-3px); box-shadow: 0 0 15px #4facfe; }
-        h2 { color: #4facfe; font-size: 26px; margin: 30px 0; border-bottom: 2px solid #162a49; padding-bottom: 10px; display: inline-block; }
-        .section-tag { background: #162a49; color: #4facfe; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 10px; display: inline-block; }
-        .article-card { background: #162a49; padding: 25px; border-radius: 15px; margin: 15px auto; text-align: right; border-right: 6px solid #4facfe; line-height: 1.8; }
-        .ad-box { background: rgba(79, 172, 254, 0.05); border: 1px dashed #4facfe; padding: 20px; margin: 20px auto; border-radius: 10px; color: #4facfe; font-size: 13px; font-weight: bold; }
-        .bot-section { background: #0a1931; padding: 25px; border-radius: 20px; border: 2px solid #162a49; margin-top: 20px; }
-        input { padding: 15px; width: 85%; border-radius: 10px; border: none; margin-bottom: 10px; font-size: 16px; color: #000; }
-        .bot-btn { background: #4facfe; color: #050f22; padding: 12px 30px; border-radius: 10px; font-weight: bold; border: none; cursor: pointer; font-size: 18px; }
-        #response { margin-top: 20px; color: #4facfe; font-weight: bold; padding: 15px; border-radius: 10px; background: rgba(79, 172, 254, 0.1); display: none; }
+        .btn-card { background: var(--card); padding: 22px; margin: 12px auto; border-radius: 15px; width: 90%; cursor: pointer; transition: 0.3s; border: 1px solid #162a49; display: block; color: white; text-decoration: none; font-size: 19px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .btn-card:hover { background: var(--primary); color: #050f22; transform: translateY(-5px); box-shadow: 0 0 25px var(--primary); }
+        .yt-btn { border-right: 8px solid var(--yt) !important; }
+        .yt-btn:hover { background: var(--yt); color: white; box-shadow: 0 0 25px var(--yt); }
+        h2 { color: var(--primary); font-size: 28px; margin: 40px 0 20px; border-bottom: 2px solid #162a49; padding-bottom: 10px; display: inline-block; }
+        .section-tag { background: #162a49; color: var(--primary); padding: 6px 18px; border-radius: 20px; font-size: 13px; font-weight: bold; margin-bottom: 10px; display: inline-block; }
+        .ad-box { background: rgba(79, 172, 254, 0.05); border: 2px dashed var(--primary); padding: 25px; margin: 30px auto; border-radius: 15px; color: var(--primary); font-size: 14px; font-weight: bold; }
+        .article-card { background: #162a49; padding: 30px; border-radius: 20px; margin: 25px auto; text-align: right; border-right: 8px solid var(--primary); line-height: 1.9; }
+        .article-card h3 { color: var(--primary); margin-top: 0; font-size: 24px; }
+        .bot-section { background: var(--card); padding: 30px; border-radius: 25px; border: 2px solid #162a49; margin-top: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        input { padding: 16px; width: 85%; border-radius: 12px; border: 2px solid #162a49; margin-bottom: 15px; font-size: 17px; outline: none; background: #050f22; color: white; }
+        input:focus { border-color: var(--primary); }
+        .bot-btn { background: var(--primary); color: #050f22; padding: 14px 40px; border-radius: 12px; font-weight: bold; border: none; cursor: pointer; font-size: 20px; transition: 0.3s; }
+        .bot-btn:hover { transform: scale(1.05); background: white; }
+        #response { margin-top: 25px; color: var(--primary); font-weight: bold; padding: 20px; border-radius: 12px; background: rgba(79, 172, 254, 0.1); display: none; line-height: 1.6; border: 1px solid var(--primary); }
+        footer { padding: 50px; background: #0a1931; border-top: 3px solid var(--primary); margin-top: 50px; }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="#earn">منصات العمل</a> 
+    <a href="#earn">منصات الشغل</a> 
+    <a href="#youtube">يوتيوب كاش</a> 
     <a href="#tools">أدوات ذكية</a> 
-    <a href="#learn">مواقع التعليم</a> 
-    <a href="#cash">قبض الفلوس</a>
-    <a href="#articles">المقالات</a> 
+    <a href="#learn">تعلم المهارات</a> 
+    <a href="#cash">استلام الأرباح</a>
+    <a href="#articles">مقالات النجاح</a> 
     <a href="#bot">المساعد</a>
 </nav>
 
 <header>
-    <h1>💰 منصة الشغل والفلوس 💰</h1>
-    <p>الطريق الأسرع والمضمون للوصول لأول 1000 دولار</p>
+    <h1>💰 منصة الشغل والفلوس الشاملة 💰</h1>
+    <p>دليلك الحصري من الصفر حتى الاحتراف والقبض بالدولار</p>
 </header>
 
-<div class="ad-box">مساحة إعلانية (مكسب إضافي لك)</div>
+<div class="ad-box">مساحة إعلانية علوية - Google AdSense</div>
 
 <div class="container" id="earn">
-    <span class="section-tag">أفضل أماكن تجيب منها شغل</span><br>
+    <span class="section-tag">أقوى مواقع الفريلانس</span>
     <h2>💼 منصات العمل الحر</h2>
-    <a href="https://mostaql.com" target="_blank" class="btn-card">🎯 مستقل - للمشاريع الكبيرة</a>
-    <a href="https://khamsat.com" target="_blank" class="btn-card">🛒 خمسات - للخدمات المصغرة</a>
-    <a href="https://www.upwork.com" target="_blank" class="btn-card">🌎 Upwork - للشغل العالمي</a>
+    <a href="https://mostaql.com" target="_blank" class="btn-card">🎯 مستقل - مشاريع كبرى</a>
+    <a href="https://khamsat.com" target="_blank" class="btn-card">🛒 خمسات - خدمات مصغرة</a>
+    <a href="https://www.upwork.com" target="_blank" class="btn-card">🌎 Upwork - الشغل العالمي</a>
+    <a href="https://www.fiverr.com" target="_blank" class="btn-card">✨ Fiverr - بيع مهاراتك</a>
+    <a href="https://www.freelancer.com" target="_blank" class="btn-card">🛠️ Freelancer - منصة العمل الحر</a>
+    <a href="https://www.wuzzuf.net" target="_blank" class="btn-card">🏢 Wuzzuf - وظائف شركات</a>
 </div>
 
+<div class="container" id="youtube">
+    <span class="section-tag" style="background: var(--yt); color: white;">عالم صناعة المحتوى</span>
+    <h2>📺 أسرار الربح من اليوتيوب</h2>
+    <a href="https://www.youtube.com/results?search_query=كيفية+انشاء+قناة+يوتيوب+ناجحة" target="_blank" class="btn-card yt-btn">🎬 ابدأ قناتك من الصفر</a>
+    <a href="https://www.youtube.com/results?search_query=أفكار+قنوات+يوتيوب+بدون+ظهور+بالوجه" target="_blank" class="btn-card yt-btn">💡 قنوات (بدون ظهور)</a>
+    <a href="https://studio.youtube.com" target="_blank" class="btn-card yt-btn">📊 استوديو منشئي المحتوى</a>
+    <a href="https://www.youtube.com/results?search_query=شروط+الربح+من+يوتيوب+2026" target="_blank" class="btn-card yt-btn">📈 شروط الربح والدرع</a>
+</div>
+
+<div class="ad-box">إعلان وسط المحتوى - In-Feed Ads</div>
+
 <div class="container" id="tools">
-    <span class="section-tag">أدوات هتخلص شغلك في ثواني</span><br>
-    <h2>🤖 أدوات الذكاء الاصطناعي</h2>
-    <a href="https://chatgpt.com" target="_blank" class="btn-card">💬 ChatGPT - للكتابة والأفكار</a>
-    <a href="https://gemini.google.com" target="_blank" class="btn-card">✨ Google Gemini - المساعد الذكي</a>
-    <a href="https://www.canva.com" target="_blank" class="btn-card">🎨 Canva - للتصميم السريع</a>
+    <span class="section-tag">أدوات ستغير حياتك</span>
+    <h2>🤖 الذكاء الاصطناعي والتصميم</h2>
+    <a href="https://chatgpt.com" target="_blank" class="btn-card">💬 ChatGPT - كاتب المحتوى الذكي</a>
+    <a href="https://gemini.google.com" target="_blank" class="btn-card">✨ Google Gemini - مساعدك الشخصي</a>
+    <a href="https://www.canva.com" target="_blank" class="btn-card">🎨 Canva - ملك التصميم السريع</a>
 </div>
 
 <div class="container" id="learn">
-    <span class="section-tag">اتعلم مهارة حقيقية مجاناً</span><br>
-    <h2>📚 أفضل مواقع التعليم</h2>
-    <a href="https://www.edraak.org" target="_blank" class="btn-card">🎓 منصة إدراك - كورسات بالعربي</a>
-    <a href="https://www.udemy.com" target="_blank" class="btn-card">📖 Udemy - أكبر موقع كورسات</a>
-    <a href="https://www.youtube.com/@ElzeroWebSchool" target="_blank" class="btn-card">💻 مدرسة الزيرو - لتعلم البرمجة</a>
+    <span class="section-tag">استثمر في نفسك</span>
+    <h2>📚 مدرسة المهارات المجانية</h2>
+    <a href="https://www.youtube.com/@ElzeroWebSchool" target="_blank" class="btn-card">💻 الزيرو ويب سكول (برمجة)</a>
+    <a href="https://www.edraak.org" target="_blank" class="btn-card">🎓 منصة إدراك - كورسات معتمدة</a>
+    <a href="https://www.udemy.com" target="_blank" class="btn-card">📖 Udemy - تعلم أي شيء</a>
 </div>
 
 <div class="container" id="cash">
-    <span class="section-tag">إزاي تستلم فلوسك في مصر</span><br>
-    <h2>💸 بوابة استلام الأرباح</h2>
-    <a href="https://www.paypal.com" target="_blank" class="btn-card">💳 PayPal - البنك الإلكتروني الأول</a>
-    <a href="https://www.payoneer.com" target="_blank" class="btn-card">🏦 Payoneer - لاستلام الدولار</a>
-    <a href="https://www.vodafone.com.eg/vodafonecash" target="_blank" class="btn-card">📱 فودافون كاش - الأسهل في مصر</a>
+    <span class="section-tag">بوابة الأموال</span>
+    <h2>💸 استلام الأرباح في مصر</h2>
+    <a href="https://www.paypal.com" target="_blank" class="btn-card">💳 PayPal - البنك العالمي</a>
+    <a href="https://www.vodafone.com.eg/vodafonecash" target="_blank" class="btn-card">📱 فودافون كاش - الأسرع في مصر</a>
+    <a href="https://www.payoneer.com" target="_blank" class="btn-card">🏦 Payoneer - استلام الدولار</a>
 </div>
 
-<div class="ad-box">إعلان (وسط المحتوى)</div>
-
 <div class="container" id="articles">
-    <h2>📖 مقالات تهمك للنجاح</h2>
+    <h2>📖 مقالات حماسية للنجاح</h2>
     <div class="article-card">
-        <h3>🚨 نصيحة العمر: لا تدفع قرشاً واحداً!</h3>
-        <p>أي موقع أو شخص يقول لك "ادفع 500 جنيه تأمين شغل" هو نصاب. الشغل الحقيقي هو اللي أنت اللي بتاخد فيه فلوس مقابل مجهودك. الشركات الكبيرة زي مستقل وأب ورك عمرها ما بتطلب منك فلوس عشان تشتغل.</p>
+        <h3>🚨 القاعدة الذهبية: احذر النصابين</h3>
+        <p>لا تدفع جنيهاً واحداً مقابل الحصول على وظيفة. أي شخص يطلب منك "مصاريف إدارية" أو "رسوم فتح حساب" هو نصاب. العمل الحقيقي هو أن تتقاضى أجراً مقابل مجهودك ومهارتك فقط.</p>
     </div>
     <div class="article-card">
-        <h3>🚀 كيف تختار مجالك الصح؟</h3>
-        <p>لو بتحب الكتابة، ادخل مجال (كتابة المحتوى). لو ليك في الرسم، ادخل (جرافيك ديزاين). لو بتحب الكمبيوتر، ادخل (برمجة). المهم تختار حاجة واحدة وتركز فيها شهرين كاملين قبل ما تدور على شغل.</p>
+        <h3>🚀 كيف تصل لأول 1000 دولار؟</h3>
+        <p>التخصص هو السر. لا تحاول فعل كل شيء؛ اختر مهارة واحدة (برمجة، تصميم، مونتاج) وركز فيها لمدة 90 يوماً. ابني معرض أعمال قوياً، وستجد أن الشركات هي من تبحث عنك.</p>
+    </div>
+    <div class="article-card">
+        <h3>🤖 مستقبل العمل في 2026</h3>
+        <p>الذكاء الاصطناعي لن يحل محلك، بل الشخص الذي يستخدم الذكاء الاصطناعي هو من سيأخذ مكانك. تعلم كيف تطوع هذه الأدوات لإنجاز مهامك في دقائق بدلاً من ساعات.</p>
     </div>
 </div>
 
 <div class="container" id="bot">
-    <h2>🤖 المساعد الشخصي التفاعلي</h2>
+    <h2>🤖 المساعد الشخصي (تفاعل لحظي)</h2>
     <div class="bot-section">
-        <input type="text" id="userInput" placeholder="اسأل المساعد (مثلاً: إزاي أقبض فلوسي؟)">
+        <p>اسألني أي سؤال عن الشغل، اليوتيوب، أو استلام الفلوس..</p>
+        <input type="text" id="userInput" placeholder="مثلاً: إزاي أقبض فلوس اليوتيوب؟">
         <br>
-        <button class="bot-btn" onclick="startBot()">إرسال للمساعد</button>
+        <button class="bot-btn" onclick="askBot()">إرسال للمساعد</button>
         <div id="response"></div>
     </div>
 </div>
 
-<footer style="padding: 40px; background: #0a1931; border-top: 2px solid #4facfe;">
-    <p>© 2026 منصة الشغل والفلوس - دليلك الموثوق</p>
+<div class="ad-box">مساحة إعلانية سفلية - Footer Ad</div>
+
+<footer>
+    <p>© 2026 منصة الشغل والفلوس - جميع الحقوق محفوظة</p>
+    <p style="font-size: 12px; color: var(--primary); margin-top: 10px;">طريقك الموثوق للربح من الإنترنت والعمل الحر</p>
 </footer>
 
 <script>
-    function startBot() {
-        const input = document.getElementById('userInput').value.toLowerCase();
-        const res = document.getElementById('response');
-        res.style.display = "block";
-        let answer = "🤖 سؤال ممتاز! البداية دايماً من تعلم مهارة، شوف قسم التعليم فوق واختار مجالك.";
+    function askBot() {
+        const query = document.getElementById('userInput').value.toLowerCase();
+        const resDiv = document.getElementById('response');
+        resDiv.style.display = "block";
         
-        if(input.includes("فلوس") || input.includes("قبض") || input.includes("استلم")) {
-            answer = "🤖 عشان تقبض فلوسك في مصر، الأفضل تفتح حساب PayPal وتربطه بفيزا (يلا باى) أو حساب بنكي، وممكن تستلم من مستقل على فودافون كاش!";
-        } else if(input.includes("ذكاء") || input.includes("chatgpt")) {
-            answer = "🤖 الذكاء الاصطناعي هو دراعك اليمين، استخدم ChatGPT عشان يساعدك في كتابة الايميلات أو ترتيب أفكارك، وده هيخلي شغلك أسرع.";
-        } else if(input.includes("نصب")) {
-            answer = "🤖 أي حد يطلب منك فلوس مقابل شغل هو نصاب. ابعد عن جروبات التليجرام المجهولة وخليك في المواقع الرسمية اللي فوق.";
+        let answer = "🤖 سؤال ذكي! البداية دايماً هي تعلم مهارة مطلوبة. شوف قسم 'تعلم المهارات' فوق واختار مجالك المفضل وابدأ فوراً.";
+
+        if(query.includes("يوتيوب") || query.includes("قناة") || query.includes("مشاهدات")) {
+            answer = "🤖 اليوتيوب محتاج 'استمرارية'. ركز على عنوان جذاب وصورة مصغرة (Thumbnail) تخلي الناس تدوس، واهتم بأول 30 ثانية من الفيديو.";
+        } else if(query.includes("فلوس") || query.includes("قبض") || query.includes("استلم") || query.includes("ارباح")) {
+            answer = "🤖 تقدر تستلم أرباحك في مصر عن طريق فودافون كاش (من مستقل وخمسات) أو عن طريق PayPal وربطه بفيزا (يلا باى) أو حساب بنكي بالدولار.";
+        } else if(query.includes("نصب") || query.includes("خايف")) {
+            answer = "🤖 نصيحة أخوية: أي حد يطلب منك فلوس عشان يبعتلك شغل هو نصاب. المواقع اللي فوق (مستقل، أب ورك، خمسات) هي اللي بتضمن حقك وفلوسك.";
+        } else if(query.includes("ازاي") || query.includes("كيف") || query.includes("ابدأ")) {
+            answer = "🤖 البداية هي: 1- حدد مهارة. 2- اتعلمها من اليوتيوب. 3- اعمل نماذج شغل. 4- اعرض خدماتك على منصات العمل الحر اللي في أول الصفحة.";
+        } else if(query.includes("برمجة") || query.includes("تصميم")) {
+            answer = "🤖 دي مجالات الذهب! البرمجة والتصميم ليهم أعلى طلب وأعلى رواتب. ابدأ فوراً بمدرسة الزيرو للبرمجة أو دروس التصميم في قسم التعليم.";
         }
-        
-        res.innerText = answer;
+
+        resDiv.innerText = answer;
     }
 </script>
 
